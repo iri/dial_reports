@@ -1,4 +1,4 @@
--module(erl_reports).
+-module(dial_reports).
 
 %% API exports
 -export([main/1]).

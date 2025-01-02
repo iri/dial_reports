@@ -1,5 +1,5 @@
-{application, erl_reports, [
-    {description, "An escript"},
+{application, dial_reports, [
+    {description, ""},
     {vsn, "0.1.0"},
     {registered, []},
     {applications, [
