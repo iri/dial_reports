@@ -1,0 +1,12 @@
+dialyzer --build_plt --apps erts kernel stdlib mnesia compiler crypto parsetools --output_plt ./otp.plt --dump_callgraph ./otp-cg.dot
+
+cd ~/dev/erl/otp; find . -name "*.erl" -print > ~/dev/erl/erl_reports/priv/list_erl.txt ; cd ~/dev/erl/erl_reports/priv
+
+cd ~/dev/erl/otp; find . -name "*.hrl" -print > ~/dev/erl/erl_reports/priv/list_hrl.txt ; cd ~/dev/erl/erl_reports/priv
+
+cd ~/dev/erl/otp; find . -name "*.c" -print | grep -v "./release" | sort > ~/dev/erl/erl
+_reports/priv/list_c.txt ; cd ~/dev/erl/erl_reports/priv
+
+cd ~/dev/erl/otp; find . -name "*.h" -print | grep -v "./release" | sort >
+~/dev/erl/erl_reports/priv/list_h.txt ; cd ~/dev/erl/erl_reports/priv
+
