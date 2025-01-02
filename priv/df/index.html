@@ -60,6 +60,8 @@ var Figures={
         ctx.textAlign="left"
         ctx.fillText(node.text,node.x+5,node.y+85)
         ctx.stroke();
+        ctx.fillStyle="yellow";
+        ctx.fillRect(node.x+100,node.y, 100, 50);
     }
 }
 
@@ -82,14 +84,14 @@ var connectors=[
 
 model.addNode(new model.node(110,10,100,100,connectors,"A Square, dblclick me to edit the text","green","Rectangle"));
 
-model.addNode(new model.node(30,140,100,100,null,"A Circle, click on the center handle to move","white", "Circle"));
+model.addNode(new model.node(430,140,100,100,null,"A Circle, click on the center handle to move","white", "Circle"));
 
 var connectors2=[
     new model.connector(0.75,.75,"output")
 ];
 model.addNode(new model.node(250,10,150,150,connectors2,"A Diamond, click on the corner handle to resize.","yellow", "Diamond"));
 model.addNode(new model.node(280,250,150,100,connectors,"A Rectangle, drag from the diamond to here to link.","Cyan", "Rectangle"));
-model.addNode(new model.node(470,50,100,100,connectors,"An Image","white", "Icon"));
+model.addNode(new model.node(470,50,100,150,connectors,"An Image","white", "Icon"));
 
 model.addLink(new model.link(0,3,1,0,"straight line","straight"));
 model.addLink(new model.link(3,4,1,1,"dblclick me to edit","square"));
@@ -103,14 +105,6 @@ document.addEventListener("selectionChanged", function(e) {
     document.getElementById("divSelectedNode").innerText="Selected node:" + e.detail;
   });
 
-</script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135656500-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-135656500-1');
 </script>
 </body>
 </html>
